@@ -6,10 +6,13 @@ import glob
 #from progressBar import ProgressBar
 #pbar = ProgressBar()
 
+#use the utilility netfinder from prologix.biz to find the machines IP address
+IPADDRESS = '192.168.1.68'
+
 rm = pyvisa.ResourceManager('@py')
 rm.list_resources()
 #open the resource
-scope = rm.open_resource('TCPIP0::192.168.1.68::1234::SOCKET', timeout = 10000)
+scope = rm.open_resource('TCPIP0::'+IPADDRESS+'::1234::SOCKET', timeout = 10000)
 
 scope.write_termination = '\n'
 scope.read_termination = '\n'

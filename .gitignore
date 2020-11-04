@@ -65,3 +65,4 @@ BlogGraphics
 # image files
 *.bmp
 *.tiff
+ClearBuffer.py

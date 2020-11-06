@@ -46,8 +46,7 @@ if __name__ == "__main__":
    elif len(sys.argv) >= 3:
       print("There was an incorrect number of arguments for program:  two maximum")
       exit()
-   # set the maximum currents:  13ma for IN-9 and 5ma for IN-13
-
+   
 
    rm = pyvisa.ResourceManager('@py')
    rm.list_resources()

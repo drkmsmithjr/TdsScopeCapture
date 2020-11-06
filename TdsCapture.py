@@ -3,9 +3,6 @@ import pyvisa
 import time
 from tqdm import tqdm
 import glob
-#import datatime
-#from progressBar import ProgressBar
-#pbar = ProgressBar()
 
 #use the utilility netfinder from prologix.biz to find the machines IP address
 IPADDRESS = '192.168.1.68'
@@ -13,7 +10,6 @@ IPADDRESS = '192.168.1.68'
 # the capture size of the data from the TDS scope for Tiff and BMP file formats
 BMPSIZE = 308278
 TIFFSIZE = 38878
-
 
 
 if __name__ == "__main__":
@@ -46,7 +42,7 @@ if __name__ == "__main__":
    elif len(sys.argv) >= 3:
       print("There was an incorrect number of arguments for program:  two maximum")
       exit()
-   
+
 
    rm = pyvisa.ResourceManager('@py')
    rm.list_resources()
@@ -93,7 +89,7 @@ if __name__ == "__main__":
    #FILESIZE = BMPSIZE
    pbar = tqdm(total=FILESIZE)
    while NOTDONE:
-#    oneByte = scope.read_bytes(FILESIZE)
+      # reading one byte at a time
       oneByte = scope.read_bytes(1)
       NumBytes += 1
       output += oneByte
@@ -106,7 +102,7 @@ if __name__ == "__main__":
 #    if oneByte == b'K':
 #       print("Next Command found")
 #       NOTDONE = False
-#pbar.finish()
+
 
 #print(output[:-1])
 # should should get the rest of the ID command

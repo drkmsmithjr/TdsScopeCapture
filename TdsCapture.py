@@ -28,6 +28,7 @@ if __name__ == "__main__":
       print("   filetype = TIFF : Capture Tiff Format")
       SavedFileFormat = 'BMP'
       FileExten = '.bmp'
+      SliceLen = -4
       FILESIZE = BMPSIZE
    elif len(sys.argv) == 2:
       SavedFileFormat = sys.argv[1]
@@ -37,9 +38,11 @@ if __name__ == "__main__":
       if SavedFileFormat == 'TIFF':
          FILESIZE = TIFFSIZE
          FileExten = '.tiff'
+         SliceLen = -5
       elif SavedFileFormat == 'BMP':
          FILESIZE = BMPSIZE
          FileExten = '.bmp'
+         SliceLen = -4
    elif len(sys.argv) >= 3:
       print("There was an incorrect number of arguments for program:  two maximum")
       exit()
@@ -57,12 +60,12 @@ if __name__ == "__main__":
    scope.write('++eos 3')
 
    #capture # ID:
-   print("Getting Hardcopy from the following Instrument:")
+   print("Getting Hardcopy from the following Instrument at IPADDRESS = ",IPADDRESS)
    try:
       #scope.write('ID?')
       scope.write('ID?')
       scope.write('++read eoi')
-      scope.read()
+      print(scope.read())
    except:
       print("Error with first ID?: often needed when first powering up")
       print("we will try again")
@@ -120,7 +123,7 @@ if __name__ == "__main__":
    max = 0
    for img in FileList:
       # remove .bmp
-      sliceEnd = img[:-4]
+      sliceEnd = img[:SliceLen]
       # remove SeedName
       sliceFront = sliceEnd[len(SeedName):]
       #print(sliceFront)

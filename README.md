@@ -1,5 +1,5 @@
 # Connecting to Vintage Tektronix TDS 700 series Oscilloscopes with Python and Ethernet
-![Tektronix TDS754A Oscilloscope Front Panel](https://github.com/drkmsmithjr/TdsScopeCapture/blob/master/Scope-image.jpg)
+![Tektronix TDS754A Oscilloscope Front Panel](https://github.com/drkmsmithjr/TdsScopeCapture/blob/master/Scope-Image.jpg)
 
 ![Prologix GPIB-Ethernet Controller Attached to TDS754A Oscilloscope ](https://github.com/drkmsmithjr/TdsScopeCapture/blob/master/GPIB-Connection.jpg)
 

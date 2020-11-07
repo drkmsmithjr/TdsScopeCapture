@@ -8,7 +8,7 @@ The full description of the project and how to install is described in [www.surf
 
 ![Prologix GPIB-Ethernet Controller Attached to TDS754A Oscilloscope ](https://github.com/drkmsmithjr/TdsScopeCapture/blob/master/GPIB-Connection.jpg)
 
-##Setup and required python 3 libraries
+## Setup and required python 3 libraries
 * 'pip3 install pyvisa'
 * 'pip3 install pyvisa-py'
 * 'pip3 install tqdm'

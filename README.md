@@ -1,7 +1,7 @@
 # Connecting to Vintage Tektronix TDS 700 series Oscilloscopes with Python and Ethernet
-![Tektronix TDS754A Oscilloscope Front Panel](https://github.com/drkmsmithjr/TdsCapture/blob/master/Scope-image.jpg)
+![Tektronix TDS754A Oscilloscope Front Panel](https://github.com/drkmsmithjr/TdsScopeCapture/blob/master/Scope-image.jpg)
 
-![Prologix GPIB-Ethernet Controller Attached to TDS754A Oscilloscope ](https://github.com/drkmsmithjr/TdsCapture/blob/master/GPIB-Connection.jpg)
+![Prologix GPIB-Ethernet Controller Attached to TDS754A Oscilloscope ](https://github.com/drkmsmithjr/TdsScopeCapture/blob/master/GPIB-Connection.jpg)
 
 In this repository is a python script that uses the Prologix GPIB-ETHERNET (GPIB-LAN) Controller to perform  color or black and white screen captures of the TDS754A scope.   This script should work for all the color and black and white Tektronix scopes made during the same time period (i.e. TDS 500 series, TDS 600 series, and TDS 700 series).
 
